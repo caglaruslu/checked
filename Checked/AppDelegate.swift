@@ -8,6 +8,13 @@
 
 import UIKit
 import CoreData
+import IQKeyboardManagerSwift
+import Firebase
+import CoreLocation
+import NotificationCenter
+import FirebaseInstanceID
+import FirebaseMessaging
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +24,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        IQKeyboardManager.sharedManager().enable = true
+        FirebaseApp.configure()
+        
+//        Database.database().isPersistenceEnabled = true
+        
         return true
     }
 

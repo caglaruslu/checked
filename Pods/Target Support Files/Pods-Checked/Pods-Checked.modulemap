@@ -1,0 +1,6 @@
+framework module Pods_Checked {
+  umbrella header "Pods-Checked-umbrella.h"
+
+  export *
+  module * { export * }
+}
