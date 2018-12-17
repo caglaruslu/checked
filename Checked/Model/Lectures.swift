@@ -12,7 +12,7 @@ import Firebase
 import FirebaseDatabase
 
 
-class Lectures{
+class Lectures: NSObject{
     
     var uuid: String?
     var major: CLBeaconMajorValue?

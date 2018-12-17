@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NoQ-RC-sYD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -49,7 +49,7 @@
                                 </state>
                                 <connections>
                                     <action selector="imzaAtBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hSx-nZ-E1L"/>
-                                    <segue destination="dEp-IC-0iS" kind="show" id="2zI-Kk-w5h"/>
+                                    <segue destination="dEp-IC-0iS" kind="showDetail" action="showViewController:sender:" id="2zI-Kk-w5h"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waR-q7-SrN">
@@ -351,8 +351,11 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="identifier" destination="5Nq-Uf-AGH" id="Mlc-lo-IzW"/>
+                                            <outlet property="pauseBtn" destination="7xa-mu-4nS" id="6fi-vx-P5X"/>
                                             <outlet property="pauseStackView" destination="mj0-1r-4UQ" id="UJb-zu-XI6"/>
+                                            <outlet property="startBtn" destination="e9B-Q8-ZZQ" id="sgo-k0-60s"/>
                                             <outlet property="startStackView" destination="o43-2h-yOu" id="Uid-R7-ac5"/>
+                                            <outlet property="stopBtn" destination="QK5-CG-kLg" id="sbT-U4-AkO"/>
                                             <outlet property="stopStackView" destination="gaU-uN-GGC" id="IAy-GE-0kP"/>
                                         </connections>
                                     </tableViewCell>

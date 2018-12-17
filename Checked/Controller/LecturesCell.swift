@@ -24,15 +24,19 @@ class LecturesCell: UITableViewCell {
         
         if let fullName = UserDefaults.standard.string(forKey: "fullName"){
             
+            if lecture.current_hour != nil{
+                Database.database().reference().child("participation").child(lecture.key!).child(lecture.current_hour!).child("participants").updateChildValues([fullName: 1], withCompletionBlock: { (error, ref) in
+                    if error == nil{
+                        self.buttonHolder.isHidden = true
+                        self.participateButton.isHidden = true
+                        self.descriptionLabel.isHidden = false
+                        
+                    }
+                })
+            }
             
-            Database.database().reference().child("participation").child(lecture.key!).child(lecture.current_hour!).updateChildValues([fullName: 1], withCompletionBlock: { (error, ref) in
-                if error == nil{
-                    self.buttonHolder.isHidden = true
-                    self.participateButton.isHidden = true
-                    self.descriptionLabel.isHidden = false
-                    
-                }
-            })
+            
+            
             
         }
         

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class PanelCell: UITableViewCell {
 
@@ -14,6 +15,13 @@ class PanelCell: UITableViewCell {
     @IBOutlet weak var identifier: UILabel!
     
     var lecture = Lectures()
+    
+    
+    
+
+    @IBOutlet weak var pauseBtn: UIButton!
+    @IBOutlet weak var stopBtn: UIButton!
+    @IBOutlet weak var startBtn: UIButton!
     
     @IBOutlet weak var stopStackView: UIStackView!
     @IBOutlet weak var startStackView: UIStackView!
@@ -24,16 +32,14 @@ class PanelCell: UITableViewCell {
         pauseStackView.isHidden = true
         startStackView.isHidden = false
         
-        
-        
     }
+    
+    
     
     @IBAction func startPressed(_ sender: Any) {
         stopStackView.isHidden = false
         pauseStackView.isHidden = false
         startStackView.isHidden = true
-        
-        
         
     }
     
@@ -42,9 +48,10 @@ class PanelCell: UITableViewCell {
         pauseStackView.isHidden = true
         startStackView.isHidden = false
         
-        
-        
     }
+    
+    
+    
     
 }
 

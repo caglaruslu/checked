@@ -41,5 +41,7 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>We need your location</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>You need to turn your bluetooth on</string>
 </dict>
 </plist>
